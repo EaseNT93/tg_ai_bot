@@ -3,14 +3,14 @@ import telebot
 import mysql.connector
 from mysql.connector import errorcode
 
-bot = telebot.TeleBot("1520012838:AAG5n0SwyGsUA_GWK-jJquW2Yb9T3AErWM4")
+bot = telebot.TeleBot("")
 
 try:
     db = mysql.connector.connect(
-      host="localhost",
-      user="root",
-      passwd="root",
-      port="3306",
+      host="",
+      user="",
+      passwd="",
+      port="",
       database="tgbot"
     )
 except mysql.connector.Error as err:
