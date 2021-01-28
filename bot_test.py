@@ -47,7 +47,7 @@ def process_firstname_step(message):
         msg = bot.send_message(message.chat.id, "Введите фамилию")
         bot.register_next_step_handler(msg, process_lastname_step)
     except Exception as e:
-        bot.reply_to(message, 'oooops')
+        bot.reply_to(message, 'error')
 
 def process_lastname_step(message):
     try:
