@@ -1,17 +1,18 @@
 import sys
+import variables
 import telebot
 import mysql.connector
 from mysql.connector import errorcode
 
-bot = telebot.TeleBot("")
+bot = telebot.TeleBot(variables.token)
 
 try:
     db = mysql.connector.connect(
-      host="",
-      user="",
-      passwd="",
-      port="",
-      database="tgbot"
+      host=variables.host,
+      user=variables.user,
+      passwd=variables.passwd,
+      port=variables.port,
+      database=variables.database
     )
 except mysql.connector.Error as err:
   if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
@@ -47,7 +48,7 @@ def process_firstname_step(message):
         msg = bot.send_message(message.chat.id, "Введите фамилию")
         bot.register_next_step_handler(msg, process_lastname_step)
     except Exception as e:
-        bot.reply_to(message, 'error')
+        bot.reply_to(message, 'oooops')
 
 def process_lastname_step(message):
     try:
