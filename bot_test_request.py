@@ -5,7 +5,7 @@ import mysql.connector
 from mysql.connector import errorcode
 
 bot = telebot.TeleBot(variables.token)
-
+#test_ver
 try:
     db = mysql.connector.connect(
       host=variables.host,

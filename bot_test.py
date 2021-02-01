@@ -5,7 +5,7 @@ import mysql.connector
 from mysql.connector import errorcode
 
 bot = telebot.TeleBot(variables.token)
-
+#test_ver
 try:
     db = mysql.connector.connect(
       host=variables.host,
@@ -29,6 +29,7 @@ cursor = db.cursor()
 
 
 user_data = {}
+task_data = {}
 
 class User:
     def __init__(self, first_name):
