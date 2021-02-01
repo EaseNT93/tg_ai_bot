@@ -11,9 +11,12 @@ db = mysql.connector.connect(
     )
 cursor = db.cursor()
 
-#cursor.execute("CREATE DATABASE variables.database")
+cursor.execute("CREATE DATABASE variables.database")
 cursor.execute("CREATE TABLE users (first_name VARCHAR(255), last_name VARCHAR(255))")
 cursor.execute("ALTER TABLE users ADD COLUMN (id INT AUTO_INCREMENT PRIMARY KEY, user_id INT UNIQUE)")
+
+cursor.execute("CREATE TABLE tasks (task_name VARCHAR(255), description VARCHAR(255))")
+cursor.execute("ALTER TABLE tasks ADD COLUMN (id INT AUTO_INCREMENT PRIMARY KEY, user_id INT)")
 
 sql = "INSERT INTO users (first_name, last_name, user_id) VALUES (%s, %s, %s)"
 val = ("Ease", "NT", 1)
