@@ -3,3 +3,5 @@ variables.py
 bot_test.py  
 bot_test_request.py
 bot_test_task.py
+__pycache__
+.handler-saves
