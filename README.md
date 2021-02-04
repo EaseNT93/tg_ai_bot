@@ -17,7 +17,7 @@ The bot is a task manager allowing to add tasks and their descriptions to databa
 # Database creation:
 The db_creator.py file allows to create a database template required for the bot to work.
 
-#Virtualenv:
+# Virtualenv:
 To install all packages, you must use the command "pip install -r requirements.txt"
 
 # Required libraries:
